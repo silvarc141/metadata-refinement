@@ -1,3 +1,5 @@
+# Windows-only
+
 . $PSScriptRoot/lib.ps1
 
 # Add Windows Forms assembly
@@ -5,7 +7,7 @@ Add-Type -AssemblyName System.Windows.Forms
 
 function Show-InputDialog {
     $form = New-Object System.Windows.Forms.Form
-    $form.Text = "Input Dialog"
+    $form.Text = "Metadata Refinement"
     $form.Size = New-Object System.Drawing.Size(300,150)
     $form.StartPosition = "CenterScreen"
 
@@ -16,7 +18,7 @@ function Show-InputDialog {
     $label = New-Object System.Windows.Forms.Label
     $label.Location = New-Object System.Drawing.Point(10,20)
     $label.Size = New-Object System.Drawing.Size(280,20)
-    $label.Text = "Please enter the path:"
+    $label.Text = "Please enter the path (wildcards such as *.wav are supported):"
 
     $okButton = New-Object System.Windows.Forms.Button
     $okButton.Location = New-Object System.Drawing.Point(75,70)
@@ -52,7 +54,7 @@ try {
         Write-Host "Operation cancelled by user."
         exit 0
     }
-    Replace-IXMLMetaDataAll $inputPath
+    Replace-IXMLMetaDataAll $inputPath -BWFMetaEditCommand "./bundled/bwfmetaedit.exe"
 }
 catch {
     Log-Error $_.Exception.Message
