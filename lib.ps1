@@ -12,8 +12,8 @@ function Replace-IXMLMetaData {
     param(
         [string]$FilePath,
         [string]$BWFMetaEditCommand = "bwfmetaedit",
-        [string]$ReplacementsPath = "./replace.json",
-        [string]$TemplatePath = "./template.xml"
+        [string]$ReplacementsPath = "$PSScriptRoot/replace.json",
+        [string]$TemplatePath = "$PSScriptRoot/template.xml"
     )
     Log-Info "Starting metadata edit process for $FilePath"
 
@@ -60,8 +60,7 @@ function Replace-IXMLMetaData {
 function Match-Files {
     param([string]$Path)
     $files = Get-ChildItem $Path -Recurse
-    $files | Foreach-Object { Log-Info "Matching file at path: $($_.FullName)" }
-    Log-Info "Matched $($files.length) files"
+    $files | ForEach-Object { Log-Info "Matching file at path: $($_.FullName)" }
     $files
 }
 
@@ -69,18 +68,35 @@ function Replace-IXMLMetaDataAll {
     param(
         [string]$Path,
         [string]$BWFMetaEditCommand = "bwfmetaedit",
-        [string]$ReplacementsPath = "./replace.json",
-        [string]$TemplatePath = "./template.xml"
+        [string]$ReplacementsPath = "$PSScriptRoot/replace.json",
+        [string]$TemplatePath = "$PSScriptRoot/template.xml",
+        [switch]$NoConfirm
     )
 
-    $files = Get-ChildItem $Path -Recurse
-    $files | Foreach-Object {$_}
-}
+    Log-Info "Using template file: $TemplatePath"
+    Log-Info "Using replacements file: $ReplacementsPath"
+    $replacements = Get-Content $ReplacementsPath | ConvertFrom-Json
+    Log-Info "Replacements to be applied:"
+    $replacements.PSObject.Properties | ForEach-Object {
+        Log-Info "$($_.Name) -> $($_.Value)"
+    }
 
-# try {
-#     Replace-IXMLMetaDataAll
-# }
-# catch {
-#     Log-Error $_.Exception.Message
-#     exit 1
-# }
+    $files = Match-Files $Path
+
+    if (-not $NoConfirm) {
+        $confirmation = Read-Host "Are you sure you want to process $($files.Count) files? (Y/N)"
+        if ($confirmation -ne 'Y') {
+            Log-Info "Operation cancelled by user."
+            return
+        }
+    }
+
+    $files | ForEach-Object { Replace-IXMLMetaData `
+        -FilePath $_.FullName `
+        -BWFMetaEditCommand $BWFMetaEditCommand `
+        -ReplacementsPath $ReplacementsPath `
+        -TemplatePath $TemplatePath
+    }
+
+    Log-Info "Completed processing $($files.Count) files."
+}
