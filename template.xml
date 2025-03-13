@@ -1,0 +1,89 @@
+<BWFXML>
+  <IXML_VERSION>1.61</IXML_VERSION>
+  <SCENE> </SCENE>
+  <ASWG>
+    <subCategory>DOG</subCategory>
+    <library>BOOM ONE</library>
+    <category>ANIMALS</category>
+    <catId>ANMLDog</catId>
+    <songTitle>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</songTitle>
+    <musicPublisher>www.boomlibrary.com</musicPublisher>
+    <notes>All sound effects are copyright BOOM Library - all rights reserved</notes>
+  </ASWG>
+  <STEINBERG>
+    <ATTR_LIST>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MediaLibrary</NAME>
+        <VALUE>BOOM ONE</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MediaCategoryPost</NAME>
+        <VALUE>ANIMALS</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MediaComment</NAME>
+        <VALUE>Single angry dog is barking loudly. Animal, Dog, Bark, Growl, Angry, Aggressive, Attack, Fight, Loud, Single.</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MusicalCategory</NAME>
+        <VALUE>DOG</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MediaCompany</NAME>
+        <VALUE>www.boomlibrary.com</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MediaLibraryManufacturerName</NAME>
+        <VALUE>BOOM Library</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MediaArtist</NAME>
+        <VALUE>BOOM Library</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MediaTrackNumber</NAME>
+        <VALUE>0</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>SmfSongName</NAME>
+        <VALUE>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</VALUE>
+      </ATTR>
+      <ATTR>
+        <TYPE>string</TYPE>
+        <NAME>MusicalInstrument</NAME>
+        <VALUE>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</VALUE>
+      </ATTR>
+    </ATTR_LIST>
+  </STEINBERG>
+  <USER>
+    <PUBLISHER>www.boomlibrary.com</PUBLISHER>
+    <LIBRARY>BOOM ONE</LIBRARY>
+    <DESCRIPTION>{{DESCRIPTION}}</DESCRIPTION>
+    <TRACKTITLE>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</TRACKTITLE>
+    <EMBEDDER>Soundminer</EMBEDDER>
+    <ARTIST>BOOM Library</ARTIST>
+    <TRACKYEAR>2022</TRACKYEAR>
+    <KEYWORDS>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</KEYWORDS>
+    <SOURCE>www.boomlibrary.com</SOURCE>
+    <TRACK>0</TRACK>
+    <MICPERSPECTIVE>MED</MICPERSPECTIVE>
+    <NOTES>All sound effects are copyright BOOM Library - all rights reserved</NOTES>
+    <URL>www.boomlibrary.com</URL>
+    <RELEASEDATE>2022-10-21</RELEASEDATE>
+    <SUBCATEGORY>DOG</SUBCATEGORY>
+    <MANUFACTURER>BOOM Library</MANUFACTURER>
+    <RATING>0</RATING>
+    <FXNAME>Dog Aggressive Bark 01</FXNAME>
+    <CATID>ANMLDog</CATID>
+    <CATEGORY>ANIMALS</CATEGORY>
+  </USER>
+</BWFXML>
