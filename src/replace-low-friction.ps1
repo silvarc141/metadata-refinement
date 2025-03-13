@@ -1,4 +1,5 @@
 # Windows-only
+# replace-simple with some gui and bundled bwfmetaedit
 
 . $PSScriptRoot/lib.ps1
 
@@ -18,7 +19,7 @@ function Show-InputDialog {
     $label = New-Object System.Windows.Forms.Label
     $label.Location = New-Object System.Drawing.Point(10,20)
     $label.Size = New-Object System.Drawing.Size(280,20)
-    $label.Text = "Please enter the path (wildcards such as *.wav are supported):"
+    $label.Text = "Please enter the path (supports wildcards):"
 
     $okButton = New-Object System.Windows.Forms.Button
     $okButton.Location = New-Object System.Drawing.Point(75,70)

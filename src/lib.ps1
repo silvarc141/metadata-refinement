@@ -84,8 +84,8 @@ function Replace-IXMLMetaDataAll {
     $files = Match-Files $Path
 
     if (-not $NoConfirm) {
-        $confirmation = Read-Host "Are you sure you want to process $($files.Count) files? (Y/N)"
-        if ($confirmation -ne 'Y') {
+        $confirmation = Read-Host "Are you sure you want to process $($files.Count) files? (Y/N) Default: Y"
+        if ($confirmation -and $confirmation.ToUpper() -ne 'Y') {
             Log-Info "Operation cancelled by user."
             return
         }
@@ -99,6 +99,11 @@ function Replace-IXMLMetaDataAll {
     }
 
     Log-Info "Completed processing $($files.Count) files."
+    
+    if (-not $NoConfirm) {
+        Write-Host "Press any key to exit..." -ForegroundColor Yellow
+        $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    }
 }
 
 function Get-MetaDataInfo {
