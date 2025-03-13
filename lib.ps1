@@ -100,3 +100,16 @@ function Replace-IXMLMetaDataAll {
 
     Log-Info "Completed processing $($files.Count) files."
 }
+
+function Get-MetaDataInfo {
+    param(
+        [string]$Path,
+        [string]$BWFMetaEditCommand = "bwfmetaedit"
+    )
+
+    Match-Files $Path | ForEach-Object { 
+        Log-Info "Metadata for file $($_.FullName):"
+        $cmdArgs = $_.FullName, "--out-xml"
+        & $BWFMetaEditCommand $cmdArgs
+    }
+}
