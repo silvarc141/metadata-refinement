@@ -1,4 +1,4 @@
-# Basic usable example.
+# Basic replacing example.
 # For more details read through lib.ps1.
 
 # Load functions from lib.ps1 in script directory.
