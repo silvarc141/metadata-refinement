@@ -39,7 +39,9 @@ function Replace-IXMLMetaData {
             throw "Property not found: $propertyPath"
         }
         
-        $IXMLContent = $IXMLContent -replace [regex]::Escape($key), $value
+        $escapedKey = [regex]::Escape($key)
+        $escapedValue = $value -replace '[$]', '$$$$'
+        $IXMLContent = [regex]::Replace($IXMLContent, $escapedKey, $escapedValue)
         Log-Info "For $FilePath replacing key `"$key`" in iXML with value from `"$propertyPath`" (value: $value)"
     }
 

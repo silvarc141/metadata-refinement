@@ -59,5 +59,7 @@ try {
 }
 catch {
     Log-Error $_.Exception.Message
+    Write-Host "Press any key to exit..." -ForegroundColor Yellow
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
     exit 1
 }
