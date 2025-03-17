@@ -1,3 +1,5 @@
+Add-Type -AssemblyName System.Security
+
 function Log-Info {
     param([string]$Message)
     Write-Host "[INFO] $Message" -ForegroundColor Cyan
@@ -26,8 +28,12 @@ function Replace-IXMLMetaData {
     & $BWFMetaEditCommand $cmdArgs
     if ($LASTEXITCODE -ne 0) { throw "BWFMetaEdit failed to extract metadata" }
 
+    # XMP section is causing issues with unescaped "&" characters and is unused here. Removing it for now.
+    $xmlContent = Get-Content -Path $tempFilePath -Raw
+    $xmlContent = $xmlContent -replace '(?s)<XMP>.*?</XMP>', ''
+
     $metaDataDoc = New-Object xml
-    $metaDataDoc.Load((Convert-Path $tempFilePath))
+    $metaDataDoc.LoadXml($xmlContent)
 
     Log-Info "Processing replacements"
     foreach ($property in $replacements.PSObject.Properties) {
@@ -39,10 +45,9 @@ function Replace-IXMLMetaData {
             throw "Property not found: $propertyPath"
         }
         
-        $escapedKey = [regex]::Escape($key)
-        $escapedValue = $value -replace '[$]', '$$$$'
-        $IXMLContent = [regex]::Replace($IXMLContent, $escapedKey, $escapedValue)
-        Log-Info "For $FilePath replacing key `"$key`" in iXML with value from `"$propertyPath`" (value: $value)"
+        $escapedValue = [System.Security.SecurityElement]::Escape($value)
+        $IXMLContent = $IXMLContent -replace [regex]::Escape($key), $escapedValue
+        Log-Info "For $FilePath replacing key `"$key`" in iXML with escaped value from `"$propertyPath`" (value: $escapedValue)"
     }
 
     $inIXMLPath = "$FilePath.iXML.xml"

@@ -2,50 +2,50 @@
   <IXML_VERSION>1.61</IXML_VERSION>
   <SCENE> </SCENE>
   <ASWG>
-    <subCategory>DOG</subCategory>
-    <library>BOOM ONE</library>
-    <category>ANIMALS</category>
-    <catId>ANMLDog</catId>
-    <songTitle>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</songTitle>
-    <musicPublisher>www.boomlibrary.com</musicPublisher>
-    <notes>All sound effects are copyright BOOM Library - all rights reserved</notes>
+    <subCategory>{{SUBCATEGORY}}</subCategory>
+    <library>THE44100</library>
+    <category>{{CATEGORY}}</category>
+    <catId>{{CATEGORYID}}</catId>
+    <songTitle>{{SONGTITLE}}</songTitle>
+    <musicPublisher>www.the44100.com</musicPublisher>
+    <notes>THE44100 - all rights reserved</notes>
   </ASWG>
   <STEINBERG>
     <ATTR_LIST>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MediaLibrary</NAME>
-        <VALUE>BOOM ONE</VALUE>
+        <VALUE>THE44100</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MediaCategoryPost</NAME>
-        <VALUE>ANIMALS</VALUE>
+        <VALUE>{{ATTRMEDIACATEGORYPOST}}</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MediaComment</NAME>
-        <VALUE>Single angry dog is barking loudly. Animal, Dog, Bark, Growl, Angry, Aggressive, Attack, Fight, Loud, Single.</VALUE>
+        <VALUE>{{ATTRMEDIACOMMENT}}</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MusicalCategory</NAME>
-        <VALUE>DOG</VALUE>
+        <VALUE>{{ATTRMUSICALCATEGORY}}</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MediaCompany</NAME>
-        <VALUE>www.boomlibrary.com</VALUE>
+        <VALUE>www.the44100.com</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MediaLibraryManufacturerName</NAME>
-        <VALUE>BOOM Library</VALUE>
+        <VALUE>THE44100</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MediaArtist</NAME>
-        <VALUE>BOOM Library</VALUE>
+        <VALUE>THE44100</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
@@ -55,35 +55,35 @@
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>SmfSongName</NAME>
-        <VALUE>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</VALUE>
+        <VALUE>{{ATTRSONGNAME}}</VALUE>
       </ATTR>
       <ATTR>
         <TYPE>string</TYPE>
         <NAME>MusicalInstrument</NAME>
-        <VALUE>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</VALUE>
+        <VALUE>{{ATTRMUSICALINSTRUMENT}}</VALUE>
       </ATTR>
     </ATTR_LIST>
   </STEINBERG>
   <USER>
-    <PUBLISHER>www.boomlibrary.com</PUBLISHER>
-    <LIBRARY>BOOM ONE</LIBRARY>
-    <DESCRIPTION>{{DESCRIPTION}}</DESCRIPTION>
-    <TRACKTITLE>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</TRACKTITLE>
+    <PUBLISHER>www.the44100.com</PUBLISHER>
+    <LIBRARY>THE44100</LIBRARY>
+    <DESCRIPTION>{{USERDESCRIPTION}}</DESCRIPTION>
+    <TRACKTITLE>{{USERTRACKTITLE}}</TRACKTITLE>
     <EMBEDDER>Soundminer</EMBEDDER>
-    <ARTIST>BOOM Library</ARTIST>
-    <TRACKYEAR>2022</TRACKYEAR>
-    <KEYWORDS>ANMLDog_Dog Aggressive Bark 01_B00M_ONE.wav</KEYWORDS>
-    <SOURCE>www.boomlibrary.com</SOURCE>
+    <ARTIST>THE44100</ARTIST>
+    <TRACKYEAR>2025</TRACKYEAR>
+    <KEYWORDS>{{USERKEYWORDS}}</KEYWORDS>
+    <SOURCE>www.the44100.com</SOURCE>
     <TRACK>0</TRACK>
     <MICPERSPECTIVE>MED</MICPERSPECTIVE>
-    <NOTES>All sound effects are copyright BOOM Library - all rights reserved</NOTES>
-    <URL>www.boomlibrary.com</URL>
+    <NOTES>THE44100 - all rights reserved</NOTES>
+    <URL>www.the44100.com</URL>
     <RELEASEDATE>2022-10-21</RELEASEDATE>
-    <SUBCATEGORY>DOG</SUBCATEGORY>
-    <MANUFACTURER>BOOM Library</MANUFACTURER>
+    <SUBCATEGORY>{{USERSUBCATEGORY}}</SUBCATEGORY>
+    <MANUFACTURER>THE44100</MANUFACTURER>
     <RATING>0</RATING>
-    <FXNAME>Dog Aggressive Bark 01</FXNAME>
-    <CATID>ANMLDog</CATID>
-    <CATEGORY>ANIMALS</CATEGORY>
+    <FXNAME>{{USERFXNAME}}</FXNAME>
+    <CATID>{{USERCATID}}</CATID>
+    <CATEGORY>{{USERCATEGORY}}</CATEGORY>
   </USER>
 </BWFXML>

@@ -1,3 +1,18 @@
 {
-  "{{DESCRIPTION}}": "Core.ICMT"
+  "{{SUBCATEGORY}}": "iXML.BWFXML.ASWG.subCategory", 
+  "{{CATEGORY}}": "Core.IGNR",
+  "{{CATEGORYID}}": "iXML.BWFXML.ASWG.catId",
+  "{{SONGTITLE}}": "iXML.BWFXML.ASWG.songTitle",
+  "{{ATTRMEDIACATEGORYPOST}}": "Core.IGNR",
+  "{{ATTRMEDIACOMMENT}}": "Core.Description",
+  "{{ATTRMUSICALCATEGORY}}": "iXML.BWFXML.ASWG.subCategory",
+  "{{ATTRSONGNAME}}": "Core.INAM",
+  "{{ATTRMUSICALINSTRUMENT}}": "Core.INAM",
+  "{{USERDESCRIPTION}}": "Core.Description",
+  "{{USERTRACKTITLE}}": "Core.INAM",
+  "{{USERKEYWORDS}}": "Core.INAM",
+  "{{USERSUBCATEGORY}}": "iXML.BWFXML.ASWG.subCategory",
+  "{{USERFXNAME}}": "Core.INAM",
+  "{{USERCATID}}": "iXML.BWFXML.ASWG.catId",
+  "{{USERCATEGORY}}": "Core.IGNR"
 }
